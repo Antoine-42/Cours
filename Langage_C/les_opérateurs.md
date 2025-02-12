@@ -1,5 +1,5 @@
 
-# Les opérateurs fondamentaux sont :
+# Les opérateurs fondamentaux:
 
 ## Les différents types d'opérations:
 
