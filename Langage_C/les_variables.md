@@ -2,8 +2,6 @@
 
 ## Introduction
 
-- **Contexte :**  
-  Troisième séance de la formation en langage C.
 - **Objectif :**  
   Comprendre le concept des variables, leur rôle dans le stockage et la manipulation des données, et apprendre les bonnes pratiques de nommage et d'initialisation.
 
