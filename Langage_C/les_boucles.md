@@ -1,4 +1,4 @@
-### Les Boucles en C
+# Les Boucles en C
 
 Les boucles sont un concept fondamental en programmation. Elles permettent de répéter un ensemble d’instructions plusieurs fois, sans avoir à les écrire manuellement à chaque itération. Dans le langage C, il existe trois types principaux de boucles : `while`, `do...while` et `for`. Chacune a ses particularités et est utilisée dans des cas spécifiques.
 
