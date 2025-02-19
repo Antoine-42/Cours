@@ -1,50 +1,97 @@
-# Les structures conditionnelles en langage C
+# Les Conditions en C
 
-En programmation, les structures conditionnelles permettent d’exécuter un bloc de code en fonction du résultat d’un test logique.  
- Elles sont essentielles pour prendre des décisions dans un programme et réagir différemment selon les situations. En langage C, plusieurs types de structures conditionnelles existent, notamment le if, else if, else, le switch et l’opérateur ternaire.
+## Introduction
 
-## If, else if et else
-La structure if permet d’exécuter un bloc d’instructions uniquement si une condition donnée est vraie.  
- Par défaut, si cette condition n’est pas remplie, le programme passe à la suite sans exécuter ce bloc.
+- **Contexte :**  
+  Après avoir vu les opérateurs, cette séance aborde les structures conditionnelles pour effectuer des tests sur des variables ou sur des retours de fonction.
+- **Objectif :**  
+  Apprendre à utiliser les instructions conditionnelles (`if`, `else if`, `else`, le ternaire et le `switch`) pour diriger l'exécution d'un programme en fonction de conditions.
 
-L’instruction else peut être ajoutée après un if pour exécuter un autre bloc de code lorsque la condition initiale est fausse. Si plusieurs conditions doivent être testées, on peut utiliser else if pour chaîner plusieurs vérifications avant de passer à l’alternative else.
+## 1. La structure `if`
 
-## Les opérateurs de comparaison
+- **Fonction :**  
+  Permet d'exécuter un bloc d'instructions uniquement si une condition donnée est vraie.
+- **Syntaxe :**
+  ```c
+  if (condition) {
+      // instructions à exécuter si la condition est vraie
+  }
+  ```
+- **Astuce :**  
+  Si le bloc contient une seule instruction, les accolades sont facultatives, mais il est conseillé de les utiliser pour améliorer la lisibilité.
 
-Les conditions sont définies grâce à des opérateurs de comparaison, qui permettent de tester des valeurs :
+## 2. Les structures `else if` et `else`
 
-== : égal à  
-!= : différent de  
-< et <= : inférieur et inférieur ou égal  
-\> et >= : supérieur et supérieur ou égal  
+- **`else if` :**  
+  Permet de chaîner plusieurs conditions pour tester différentes situations.
+- **`else` :**  
+  Exécute un bloc d'instructions lorsque toutes les conditions précédentes sont fausses.
+- **Exemple :**
+  ```c
+  if (nombre == 0) {
+      printf("nombre vaut zéro\n");
+  } else if (nombre < 20) {
+      printf("nombre est inférieur à 20\n");
+  } else {
+      printf("nombre est supérieur ou égal à 20\n");
+  }
+  ```
 
-Il est également possible de combiner plusieurs conditions à l’aide d’opérateurs logiques :
+## 3. Opérateurs de comparaison
 
-&& (ET logique) : toutes les conditions doivent être vraies pour que le test soit validé.  
-|| (OU logique) : au moins une des conditions doit être vraie pour valider le test.  
-! (NON logique) : inverse le résultat d’une condition.  
-Par exemple, un programme peut vérifier si un utilisateur est majeur en combinant des conditions logiques avec if et else if.
+- **`==`** : Teste l'égalité.
+- **`!=`** : Teste la non-égalité.
+- **`<`, `<=`, `>`, `>=`** : Comparaison numérique.
 
-## Le switch
+## 4. Les opérateurs logiques
 
-Lorsque l’on doit comparer une variable à plusieurs valeurs précises, il peut être plus efficace d’utiliser un switch plutôt qu’une suite de if et else if.  
- Le switch permet d’exécuter des blocs d’instructions en fonction de la valeur d’une variable donnée.
+- **`&&` (ET) :**  
+  Toutes les conditions doivent être vraies.
+- **`||` (OU) :**  
+  Au moins une condition doit être vraie.
 
-Chaque valeur testée est définie avec un case, suivi d’un break pour éviter l’exécution des autres cas après une correspondance. Un default est souvent utilisé à la fin pour gérer le cas où aucune des valeurs précédentes ne correspond.
+## 5. L'opérateur ternaire
 
-Le switch est utile lorsqu’une variable peut prendre un nombre limité de valeurs précises, comme des choix de menu, des jours de la semaine ou des niveaux de difficulté dans un jeu. Contrairement au if, il ne peut pas tester des plages de valeurs, seulement des correspondances exactes.
+- **Fonction :**  
+  Permet de réaliser une affectation conditionnelle de façon concise.
+- **Syntaxe :**
+  ```c
+  condition ? valeur_si_vrai : valeur_si_faux;
+  ```
+- **Exemple :**
+  ```c
+  int est15 = (age == 15) ? 1 : 0;
+  ```
+  Ce code affecte `1` à `est15` si `age` est égal à 15, sinon `0`.
 
-## L’opérateur ternaire
+## 6. La structure `switch`
 
-L’opérateur ternaire est une alternative compacte au if lorsqu’il y a une condition simple avec une seule instruction à exécuter. Il prend la forme suivante :
+- **Fonction :**  
+  Permet de tester une seule variable contre plusieurs valeurs possibles.
+- **Syntaxe :**
+  ```c
+  switch(variable) {
+      case valeur1:
+          // instructions pour valeur1
+          break;
+      case valeur2:
+          // instructions pour valeur2
+          break;
+      // ...
+      default:
+          // instructions si aucune valeur ne correspond
+          break;
+  }
+  ```
+- **Astuce :**  
+  Utiliser `break` à la fin de chaque case pour éviter un comportement inattendu.
 
-condition ? valeur_si_vrai : valeur_si_faux;
+## Conclusion
 
-Cet opérateur permet d’écrire un test en une seule ligne, ce qui peut être utile pour affecter une valeur à une variable en fonction d’une condition.  
- Il est souvent utilisé pour améliorer la lisibilité du code lorsqu’un simple if serait trop long.
-
-## Importance des structures conditionnelles
-
-Les conditions sont essentielles en programmation, car elles permettent de rendre un programme dynamique et interactif. Sans elles, un programme exécuterait toutes les instructions de manière linéaire, sans s’adapter aux entrées ou aux résultats intermédiaires.
-
-Elles sont omniprésentes dans tous les langages et seront combinées avec d’autres concepts comme les boucles, qui permettent de répéter une action tant qu’une condition est remplie. Ce sera l’objet de la prochaine leçon.
+- **Bilan :**  
+  - Les structures conditionnelles permettent de contrôler le flux d'exécution d'un programme selon des tests logiques.
+  - L'opérateur ternaire offre une syntaxe compacte pour affecter rapidement le résultat d'un test.
+  - Le `switch` simplifie la gestion de plusieurs cas sur une seule variable.
+- **Prochaine étape :**  
+  La prochaine séance portera sur les boucles, une autre notion clé pour contrôler l'exécution répétée d'instructions.
+---
