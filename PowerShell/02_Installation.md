@@ -69,5 +69,5 @@ Write-Output "Hello, PowerShell!"
 
 ---
 
-✅ **Prochaine étape :** [Les bases de PowerShell](03_Les_Bases.md)
+✅ **Prochaine étape :** [Les variables_et_types_de_donnees de PowerShell](03_Variables_et_Types_de_Donnees.md)
 
