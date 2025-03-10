@@ -1,4 +1,4 @@
-# 🪟 Guide Complet sur l'Active Directory (AD)
+# 🪟 Active Directory (AD)
 
 Ce guide complet t’aide à comprendre en détail l’Active Directory (AD), ses composants essentiels, son fonctionnement précis et son importance stratégique dans les environnements Windows Server.
 
