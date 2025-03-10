@@ -24,7 +24,7 @@ Une adresse IP identifie chaque équipement connecté à un réseau informatique
 - Utilisées uniquement sur **Internet**.
 - Adresses uniques dans le monde.
 
----
+--- 
 
 ## Architecture d’un processeur
 
