@@ -1,71 +1,26 @@
-# Les adresses IP et l'architecture du processeur
+# Introduction
 
-## Les adresses IP
+## Présentation du dossier
 
-### Définition :
-Une adresse IP identifie chaque équipement connecté à un réseau informatique.
+Ce dossier a été créé dans le cadre de mon **BTS** afin de regrouper l’ensemble des connaissances, notions et compétences que j’acquerrai au cours de mes **deux années de formation**. Il me servira de **référence** et d’outil d’apprentissage tout au long de mon parcours.
 
-### Types d'adresses IP :
-- **IPv4** : Adresses composées de 4 valeurs (0-255) séparées par des points, ex : `192.168.1.1`.
-- **IPv6** : Adresses hexadécimales avec 8 groupes séparés par des deux-points, ex : `1987:0C00:0000:0000`.
+## Objectifs
 
-### Classes d'adresses IPv4 :
-- **Classe A** : Entre `1 et 126` → Pour les grands réseaux avec beaucoup d’hôtes.
-- **Classe B** : Entre `128 et 191` → Pour les réseaux de taille moyenne.
-- **Classe C** : Entre `192 et 223` → Pour les réseaux locaux.
-- **Classe D** : Entre `224 et 239` → Pour les réseaux multicast.
-- **Classe E** : Entre `240 et 255` → Réservée pour la recherche et le développement.
+L’objectif principal de ce dossier est de :
+- **Structurer et centraliser** les notions abordées en cours.
+- **Faciliter la révision** en ayant un support organisé et clair.
+- **Suivre ma progression** en ajoutant régulièrement de nouveaux contenus.
+- **Créer un référentiel personnel** utile pour mes projets et mes examens.
 
-### Adresses IP privées :
-- Utilisées pour les équipements sur des réseaux locaux (**intranet**).
-- Non utilisables directement sur Internet (**non routables**).
 
-### Adresses IP publiques :
-- Utilisées uniquement sur **Internet**.
-- Adresses uniques dans le monde.
 
----
+## Utilisation du dossier
 
-## Architecture d’un processeur
+Ce dossier sera régulièrement mis à jour en fonction des nouveaux apprentissages et des exercices réalisés en classe ou en autonomie.  
+Il pourra également servir de **base de travail** pour mes projets, mes révisions et la préparation des **examens finaux**.
 
-Il existe **deux types d’architectures** : **32 bits** et **64 bits**.  
-Cela fait référence à la façon dont le processeur d’un ordinateur traite les informations.  
-Un processeur **64 bits** traite une plus grande quantité de données qu’un processeur **32 bits**.  
-👉 **Le 64 bits est donc plus rapide qu’un système 32 bits.**
+## Conclusion
 
----
+En documentant mon parcours de **BTS**, ce dossier m’aidera à mieux comprendre et assimiler les concepts techniques tout en constituant une **ressource précieuse** pour mon avenir professionnel.
 
-## Le binaire
-
-- **1 bit** est un nombre binaire et peut adopter deux valeurs : `0` et `1`.
-- **Un ordinateur fonctionne avec des nombres binaires**, effectue des calculs et sauvegarde des informations sous forme binaire.
-- **Un byte** est composé de **8 bits** :
-  - `8 bits = 1 octet = 1 byte`
-
----
-
-## Processeur VCPU
-
-Un **vCPU (Virtual CPU)** est une unité de calcul attribuée à une **machine virtuelle (VM)** dans un environnement virtualisé.  
-Il représente généralement un **thread logique** d'un processeur physique.  
-
-### Importance :
-- Le nombre de **vCPU** affecte les performances de la **VM**.
-- Une mauvaise gestion des vCPU peut entraîner une **surcharge des ressources**.
-
----
-
-## Sauvegarde de type WORM
-
-Une sauvegarde de type **WORM** (**Write Once, Read Many**) est une technologie permettant **d'écrire des données une seule fois**, sans possibilité de modification ou suppression ultérieure.
-
-### Caractéristiques :
-- Utilisée pour répondre à des **exigences réglementaires**.
-- Garantit **l'intégrité des données critiques**.
-- Souvent utilisée dans les **secteurs financiers, juridiques ou médicaux**.
-
-### Supports :
-- **Physiques** : Disques optiques, bandes magnétiques.
-- **Cloud / Logiciel** : Solutions de stockage sécurisées.
-
----
+📌 *Ce document évoluera tout au long de ma formation et reflètera mon apprentissage et mes compétences acquises.*  
