@@ -90,7 +90,7 @@ sudo mount -t cifs //serveur/partage /mnt/point_de_montage -o username=utilisate
 | --------- | ------------------------------- | ------------------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **SMB**   | Partage de fichiers/imprimantes | Oui (SMB 3.x)       | Windows, Linux (via Samba), macOS |                                                                                                                                                            |
 | **FTP**   | Transfert de fichiers           | Non (en clair)      | Multi-plateforme                  |                                                                                                                                                            |
-| **NFS**   | Partage de fichiers             | Oui (avec Kerberos) | Principalement Unix/Linux         |
+| **NFS**   | Partage de fichiers             | Oui (avec Kerberos) | Principalement Unix/Linux         
 ---
 
 ## 📚 Ressources supplémentaires
