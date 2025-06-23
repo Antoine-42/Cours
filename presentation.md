@@ -4,14 +4,6 @@
 
 ## 🧾 Slide 1 – Titre
 
-**Slide :**
-
-* NAORIS
-* ANTOINE GRAEFF
-* PROJET BTS - 2025
-* COFFRE-FORT NUMÉRIQUE
-
-🎤 **À dire :**
 « Bonjour, je m’appelle Antoine Graëff et je vais vous présenter mon projet de fin d’année intitulé *Naoris*. Il s’agit d’un **coffre-fort numérique personnel** que j’ai entièrement développé.
 
 Ce projet s’inscrit dans une logique d’indépendance, de sécurité et d’utilité concrète : il me permet de stocker et sécuriser mes fichiers et mes mots de passe tout en restant maître de mes données, puisque tout est auto-hébergé. »
@@ -20,13 +12,6 @@ Ce projet s’inscrit dans une logique d’indépendance, de sécurité et d’u
 
 ## 📚 Slide 2 – Contexte : le chemin jusqu’à Naoris
 
-**Slide :**
-
-* PROJET 1 – M5 STACK : Système de sécurité, reconnaissance biométrique, mais trop compliqué à réaliser
-* PROJET 2 – NAS PERSONNEL : Nextcloud, fonctionnel mais peu personnalisable et peu de code
-* PROJET FINAL : 100 % développé, utile au quotidien, lié à la cybersécurité
-
-🎤 **À dire :**
 « Avant d’en arriver à Naoris, j’ai exploré plusieurs pistes.
 
 J’ai d’abord envisagé un projet basé sur un **M5 Stack avec reconnaissance biométrique**, mais j’ai rapidement vu que la mise en œuvre serait très complexe techniquement.
@@ -39,14 +24,6 @@ J’ai donc décidé de créer un projet **100 % développé par moi**, qui soit
 
 ## 🧠 Slide 3 – Expression des besoins
 
-**Slide :**
-
-* Centraliser mes fichiers
-* Sécuriser l’accès
-* Accessible de partout
-* Gérer plusieurs utilisateurs
-
-🎤 **À dire :**
 « Les besoins étaient très concrets. D’abord, **centraliser mes fichiers** importants, qui étaient souvent éparpillés sur différents supports.
 
 Ensuite, **sécuriser l’accès** à ces fichiers : comme ce sont des données sensibles, il fallait une vraie protection.
@@ -59,15 +36,6 @@ Enfin, je voulais pouvoir **gérer plusieurs utilisateurs**, par exemple si je v
 
 ## 🛠️ Slide 4 – De l’idée aux fonctionnalités
 
-**Slide :**
-
-1. Centraliser les fichiers : upload, dossiers, prévisualisation
-2. Sécuriser l’accès : mot de passe, 2FA, chiffrement, SSL
-3. Accès depuis partout : déploiement, nom de domaine, responsive, auto-hébergement
-4. Utilisateurs : création, rôles, gestion, historique
-5. Dashboard : nombre de fichiers, taille, connexions, mots de passe
-
-🎤 **À dire :**
 « J’ai transformé ces besoins en fonctionnalités concrètes :
 
 1. Pour **centraliser**, j’ai intégré le téléversement de fichiers, l’organisation en dossiers, et la **prévisualisation directe** (PDF, images).
@@ -78,13 +46,8 @@ Enfin, je voulais pouvoir **gérer plusieurs utilisateurs**, par exemple si je v
 
 ---
 
-## 💻 Slide 5 – Architecture générale
+## 💻  Slide 7 - comment ca fonctionne
 
-**Slide :**
-
-* Utilisateur → Navigateur Web → Serveur Nginx → Application Flask → Base de données → Affichage dynamique
-
-🎤 **À dire :**
 « Voici une description détaillée de l’**architecture technique** de Naoris. Mon objectif était de bâtir une infrastructure solide, sécurisée et performante, tout en restant compréhensible et maintenable.
 
 Tout commence par l’**utilisateur**, qui accède à Naoris via un **navigateur web**. Il peut alors interagir avec la plateforme : se connecter, téléverser un fichier, consulter ses mots de passe, etc. Chaque action qu’il réalise génère une requête HTTP.
@@ -120,11 +83,10 @@ Enfin, tout ce système tourne sur un **serveur VPS Ubuntu chez OVH**, que j’a
 * obtention du **certificat SSL**,
 * et configuration d’un service `systemd` pour assurer un redémarrage automatique de l’application au boot ou en cas d’erreur.
 
-Cette architecture m’a permis d’apprendre à gérer un vrai déploiement, dans des conditions professionnelles. »
+Cette architecture m’a permis d’apprendre à gérer un vrai déploiement, dans des conditions 
 
----
 
-## 🧱 Slide 6 – Technologies utilisées
+## 🧱 Slide5. Technologies utilisées
 
 **Slide :**
 
