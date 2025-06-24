@@ -67,7 +67,7 @@ Enfin, je voulais pouvoir **gérer plusieurs utilisateurs**, par exemple si je v
 
 ---
 
-💻 Slide 7 – Comment ça fonctionne
+## 💻 Slide 7 – Comment ça fonctionne
 L’utilisateur accède à Naoris depuis son navigateur web. Quand il se connecte, envoie un fichier ou consulte un mot de passe, il envoie une requête HTTP.
 
 Cette requête passe par :
