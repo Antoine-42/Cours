@@ -129,3 +129,39 @@ Une fois la réponse prête, elle est renvoyée via Nginx jusqu’au navigateur.
 « Merci de m’avoir écouté. Ce projet m’a permis d’apprendre énormément, de progresser dans plein de domaines, et surtout de construire un outil que j’utilise déjà au quotidien.
 
 Je vais maintenant vous faire une démonstration en direct. »
+
+
+🧠 Rappel des outils utilisés
+🔹 Flask
+Framework Python léger pour créer des applications web.
+C’est lui qui gère toutes les fonctionnalités de Naoris : connexions, routes, traitement des fichiers, affichage des pages…
+
+🔹 Gunicorn
+C’est un serveur WSGI. Il sert d’intermédiaire entre Flask et Nginx.
+Il permet de lancer Flask de manière stable et performante, avec plusieurs utilisateurs en même temps.
+
+🔹 Nginx
+C’est un serveur web.
+Il sert de reverse proxy, filtre les requêtes, les sécurise avec le protocole HTTPS (certificat SSL), puis les redirige vers Gunicorn.
+
+🔹 Jinja2
+C’est un moteur de templates utilisé par Flask pour créer les pages HTML.
+Il permet d’insérer dynamiquement du contenu (comme le nom de l’utilisateur ou la liste de fichiers) dans les pages.
+
+🔹 Flask
+C’est un outil en Python qui sert à créer un site web.
+Il me permet de gérer les pages, les connexions, les boutons, les actions des utilisateurs...
+👉 On appelle ça un framework : en gros, c’est une boîte à outils déjà prête pour créer plus vite un site ou une application.
+
+🔹 Gunicorn
+Flask tout seul n’est pas fait pour accueillir plein d’utilisateurs à la fois.
+Gunicorn sert à faire tourner Flask de façon plus solide et rapide, surtout quand plusieurs personnes utilisent le site en même temps.
+👉 C’est ce qu’on appelle un serveur WSGI : un programme qui "connecte" Python à Internet.
+
+🔹 Nginx
+C’est un gardien d’entrée. Il reçoit les demandes des utilisateurs (ex : "je veux me connecter"), les filtre, les sécurise avec le HTTPS, puis les envoie à Gunicorn.
+👉 C’est ce qu’on appelle un reverse proxy.
+
+🔹 Jinja2
+Quand Flask doit créer une page web (ex : liste des fichiers), Jinja2 sert à remplir automatiquement la page avec les bonnes infos (nom du fichier, utilisateur connecté, etc.).
+👉 C’est un remplisseur intelligent de pages HTML.
