@@ -131,7 +131,7 @@ Une fois la réponse prête, elle est renvoyée via Nginx jusqu’au navigateur.
 Je vais maintenant vous faire une démonstration en direct. »
 
 
-🧠 Rappel des outils utilisés
+# 🧠 Rappel des outils utilisés
 🔹 Flask
 Framework Python léger pour créer des applications web.
 C’est lui qui gère toutes les fonctionnalités de Naoris : connexions, routes, traitement des fichiers, affichage des pages…
