@@ -133,35 +133,19 @@ Je vais maintenant vous faire une démonstration en direct. »
 
 # 🧠 Rappel des outils utilisés
 🔹 Flask
-Framework Python léger pour créer des applications web.
-C’est lui qui gère toutes les fonctionnalités de Naoris : connexions, routes, traitement des fichiers, affichage des pages…
+C’est un outil en Python (qu’on appelle “framework”) qui sert à créer un site web.
+Il m’aide à gérer les pages, les connexions, les boutons, les fichiers, les mots de passe, etc.
+👉 En gros, c’est une boîte à outils prête à l’emploi pour construire un site plus facilement.
 
 🔹 Gunicorn
-C’est un serveur WSGI. Il sert d’intermédiaire entre Flask et Nginx.
-Il permet de lancer Flask de manière stable et performante, avec plusieurs utilisateurs en même temps.
+Flask tout seul n’est pas fait pour gérer plein d’utilisateurs en même temps.
+Gunicorn sert à lancer Flask de façon solide et rapide, pour que tout reste fluide même si plusieurs personnes utilisent le site.
+👉 C’est ce qu’on appelle un serveur WSGI, c’est-à-dire un programme qui connecte Flask à Internet.
 
 🔹 Nginx
-C’est un serveur web.
-Il sert de reverse proxy, filtre les requêtes, les sécurise avec le protocole HTTPS (certificat SSL), puis les redirige vers Gunicorn.
+C’est le gardien de l’entrée du site. Il reçoit les demandes des utilisateurs (comme “je veux me connecter”), les sécurise grâce au HTTPS, et les transmet ensuite à Gunicorn.
+👉 C’est ce qu’on appelle un reverse proxy, il filtre et redirige les requêtes.
 
 🔹 Jinja2
-C’est un moteur de templates utilisé par Flask pour créer les pages HTML.
-Il permet d’insérer dynamiquement du contenu (comme le nom de l’utilisateur ou la liste de fichiers) dans les pages.
-
-🔹 Flask
-C’est un outil en Python qui sert à créer un site web.
-Il me permet de gérer les pages, les connexions, les boutons, les actions des utilisateurs...
-👉 On appelle ça un framework : en gros, c’est une boîte à outils déjà prête pour créer plus vite un site ou une application.
-
-🔹 Gunicorn
-Flask tout seul n’est pas fait pour accueillir plein d’utilisateurs à la fois.
-Gunicorn sert à faire tourner Flask de façon plus solide et rapide, surtout quand plusieurs personnes utilisent le site en même temps.
-👉 C’est ce qu’on appelle un serveur WSGI : un programme qui "connecte" Python à Internet.
-
-🔹 Nginx
-C’est un gardien d’entrée. Il reçoit les demandes des utilisateurs (ex : "je veux me connecter"), les filtre, les sécurise avec le HTTPS, puis les envoie à Gunicorn.
-👉 C’est ce qu’on appelle un reverse proxy.
-
-🔹 Jinja2
-Quand Flask doit créer une page web (ex : liste des fichiers), Jinja2 sert à remplir automatiquement la page avec les bonnes infos (nom du fichier, utilisateur connecté, etc.).
-👉 C’est un remplisseur intelligent de pages HTML.
+Quand Flask doit afficher une page (ex. la liste des fichiers), Jinja2 permet d’insérer automatiquement les bonnes infos dans la page HTML (nom du fichier, utilisateur connecté, etc.).
+👉 C’est un remplisseur intelligent de pages web.
