@@ -45,47 +45,6 @@ Enfin, je voulais pouvoir **gérer plusieurs utilisateurs**, par exemple si je v
 5. Enfin, j’ai créé un **dashboard** clair avec des stats : nombre de fichiers, poids total, dernières connexions, nombre de mots de passe. »
 
 ---
-
-## 💻  Slide 7 - comment ca fonctionne
-
-« Voici une description détaillée de l’**architecture technique** de Naoris. Mon objectif était de bâtir une infrastructure solide, sécurisée et performante, tout en restant compréhensible et maintenable.
-
-Tout commence par l’**utilisateur**, qui accède à Naoris via un **navigateur web**. Il peut alors interagir avec la plateforme : se connecter, téléverser un fichier, consulter ses mots de passe, etc. Chaque action qu’il réalise génère une requête HTTP.
-
-Cette requête arrive sur mon **serveur Nginx**, que j’ai configuré comme **reverse proxy**. Son rôle est multiple :
-
-* D’une part, il reçoit et filtre les requêtes entrantes.
-* D’autre part, il redirige ces requêtes vers l’application web réelle, qui tourne derrière, avec **Gunicorn**.
-* Enfin, il assure la **sécurisation des échanges** grâce au **certificat SSL Let’s Encrypt**, pour garantir que toutes les données transmises entre l’utilisateur et le serveur sont chiffrées en HTTPS.
-
-Une fois redirigée, la requête passe par **Gunicorn**, un serveur WSGI, qui permet de faire tourner une application Flask de manière stable et performante, en supportant plusieurs connexions simultanées.
-
-Vient ensuite **Flask**, le cœur applicatif du projet. C’est là que tout est orchestré :
-
-* La gestion des sessions utilisateur (connexion, déconnexion, vérification de rôle...)
-* Le contrôle des accès selon le niveau de permissions (user ou admin)
-* La gestion de la double authentification (2FA)
-* Le traitement des fichiers : envoi, renommage, déplacement, suppression
-* Le chiffrement/déchiffrement des mots de passe stockés
-
-Flask s’appuie sur une **base de données SQLite**. Légère mais efficace, elle contient toutes les données nécessaires : comptes utilisateurs, mots de passe (chiffrés avec **Fernet**), historiques de connexion, chemins des fichiers, etc. C’est une solution adaptée pour un projet personnel tout en restant sécurisée.
-
-Lorsque Flask doit générer une page HTML à afficher, il utilise **Jinja2**. C’est un moteur de templates qui permet d’injecter dynamiquement les bonnes données dans les bonnes pages (ex. liste des fichiers, nom de l’utilisateur connecté, statistiques, etc.).
-
-Une fois le traitement terminé, la réponse est renvoyée à **Nginx**, qui la transmet au navigateur de l’utilisateur. Tout ce processus se déroule très rapidement : en quelques millisecondes, la page est générée, sécurisée et affichée à l’écran.
-
-Enfin, tout ce système tourne sur un **serveur VPS Ubuntu chez OVH**, que j’ai entièrement configuré :
-
-* création de l’environnement Python,
-* installation des dépendances,
-* configuration de Gunicorn et Nginx,
-* mise en place du **nom de domaine `naoris.fr`**, avec gestion des **enregistrements DNS**,
-* obtention du **certificat SSL**,
-* et configuration d’un service `systemd` pour assurer un redémarrage automatique de l’application au boot ou en cas d’erreur.
-
-Cette architecture m’a permis d’apprendre à gérer un vrai déploiement, dans des conditions 
-
-
 ## 🧱 Slide5. Technologies utilisées
 
 **Slide :**
@@ -108,7 +67,39 @@ Cette architecture m’a permis d’apprendre à gérer un vrai déploiement, da
 
 ---
 
-## 📈 Slide 7 – Pistes d’évolution
+💻 Slide 7 – Comment ça fonctionne
+L’utilisateur accède à Naoris depuis son navigateur web. Quand il se connecte, envoie un fichier ou consulte un mot de passe, il envoie une requête HTTP.
+
+Cette requête passe par :
+
+Nginx
+➤ Sert de reverse proxy : il reçoit la requête, la sécurise avec HTTPS (Let’s Encrypt), puis la redirige vers l’application.
+
+Gunicorn
+➤ C’est un serveur qui permet de faire tourner mon application Flask de manière fluide, même avec plusieurs utilisateurs.
+
+Flask
+➤ C’est le cœur du projet :
+
+Gère les connexions et permissions
+
+Gère la 2FA (double authentification)
+
+Traite les fichiers et les mots de passe
+
+Génère les pages HTML avec Jinja2
+
+SQLite
+➤ Petite base de données qui stocke tout : utilisateurs, mots de passe (chiffrés avec Fernet), fichiers, logs...
+
+Une fois la réponse prête, elle est renvoyée via Nginx jusqu’au navigateur. Tout ça se passe en quelques millisecondes.
+
+🖥️ L’ensemble tourne sur un serveur VPS Ubuntu OVH avec mon nom de domaine naoris.fr. J’ai tout installé moi-même : Python, Nginx, Gunicorn, SSL, DNS, et système de redémarrage automatique (systemd).
+
+
+
+
+## 📈 Slide 8 – Pistes d’évolution
 
 **Slide :**
 
@@ -127,7 +118,7 @@ Cette architecture m’a permis d’apprendre à gérer un vrai déploiement, da
 
 ---
 
-## 🙏 Slide 8 – Conclusion
+## 🙏 Slide 9 – Conclusion
 
 **Slide :**
 
